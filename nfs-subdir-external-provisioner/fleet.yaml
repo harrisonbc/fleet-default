@@ -1,0 +1,17 @@
+# The namespace to be used for installation
+#
+
+namespace: nfs-subdir-external-provisioner
+
+helm:
+  releaseName: nfs-subdir-external-provisioner
+
+  # Any values that should be placed in the `values.yaml` and passed to helm during
+  # install.
+
+  values:
+#    any-custom: value
+
+  valuesFiles:
+    - values.yaml
+
