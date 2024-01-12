@@ -1,0 +1,12 @@
+defaultNamespace: longhorn-system
+
+helm:
+  releaseName: longhorn
+  chart: longhorn
+  version: 1.5.3
+  repo: https://charts.longhorn.io
+  values:
+#    installCRDs: true
+
+labels:
+  app: longhorn
