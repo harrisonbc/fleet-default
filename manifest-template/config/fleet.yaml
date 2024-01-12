@@ -1,0 +1,7 @@
+labels:
+  appgroup: longhorn-config
+
+dependsOn:
+  - selector:
+      matchLabels:
+        appgroup: longhorn-app
