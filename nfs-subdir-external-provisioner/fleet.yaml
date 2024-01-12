@@ -13,7 +13,22 @@ helm:
     nfs:
       server: microserver.harrison.local
       path: /mnt/user/mycloud-vols
+      mountOptions: null
+      reclaimPolicy: Retain
+      volumeName: nfs-subdir-external-provisioner-root
 
+    storageClass:
+      accessModes: ReadWriteOnce
+      allowVolumeExpansion: true
+      annotations: {}
+      archiveOnDelete: true
+      create: true
+      defaultClass: false
+      name: nfs-client
+      onDelete: null
+      pathPattern: null
+      reclaimPolicy: Delete
+      volumeBindingMode: Immediate
 
 #  valuesFiles:
 #    - values.yaml
