@@ -1,6 +1,4 @@
 # The namespace to be used for installation
-#
-
 defaultNamespace: nfs-subdir-external-provisioner
 
 helm:
@@ -9,13 +7,9 @@ helm:
   repo: https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
   version: 4.0.18
 
-
-  # Any values that should be placed in the `values.yaml` and passed to helm during
-  # install.
+  # Any values that should be placed in the `values.yaml` and passed to helm during install.
 
   values:
-#    any-custom: value
-
   valuesFiles:
     - values.yaml
 
