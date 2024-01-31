@@ -1,6 +1,5 @@
 defaultNamespace: harbor
-helm:
-  releaseName: harbor
+
 
 # This file and all contents in it are OPTIONAL.
 
@@ -9,7 +8,7 @@ helm:
 namespace: harbor
 
 helm:
-  releaseName: rancher-monitoring
+  releaseName: harbor
   repo: https://helm.goharbor.io
   chart: harbor
   version: 1.14.0
