@@ -14,6 +14,8 @@ helm:
   chart: harbor
   version: 1.14.0
 
+  valuesFiles:
+    - values.yaml
 
 # Custom helm options
 
