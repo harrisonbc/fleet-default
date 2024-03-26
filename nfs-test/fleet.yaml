@@ -1,5 +1,5 @@
 # The namespace to be used for installation
-# defaultNamespace: nfs-subdir-external-provisioner
+defaultNamespace: nfs-subdir-external-provisioner
 
 helm:
   releaseName: nfs-subdir-external-provisioner
