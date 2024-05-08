@@ -19,7 +19,7 @@ spec:
        cloudCredentialName: cattle-global-data:cc-qn5qc
        endpoint: s3.brynnharrison.com
        endpointCA: ''
-       folder: longhorn-1
+       folder: longhorn-2
        region: eu-west-1
        skipSSLVerify: false
      snapshotRetention: 5
