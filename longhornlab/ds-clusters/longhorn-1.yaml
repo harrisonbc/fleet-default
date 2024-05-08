@@ -1,7 +1,7 @@
 apiVersion: provisioning.cattle.io/v1
 kind: Cluster
 metadata:
- name: longhorn-3
+ name: longhorn-1
  namespace: fleet-default
 spec:
  kubernetesVersion: v1.28.8+rke2r1

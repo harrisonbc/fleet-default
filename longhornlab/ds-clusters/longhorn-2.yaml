@@ -1,0 +1,59 @@
+apiVersion: provisioning.cattle.io/v1
+kind: Cluster
+metadata:
+ name: longhorn-2
+ namespace: fleet-default
+spec:
+ kubernetesVersion: v1.28.8+rke2r1
+ localClusterAuthEndpoint:
+   caCerts: ''
+   enabled: false
+   fqdn: ''
+ rkeConfig:
+   chartValues:
+     rke2-calico: {}
+   etcd:
+     disableSnapshots: false
+     s3:
+       bucket: rancher-backups
+       cloudCredentialName: cattle-global-data:cc-qn5qc
+       endpoint: s3.brynnharrison.com
+       endpointCA: ''
+       folder: longhorn-1
+       region: eu-west-1
+       skipSSLVerify: false
+     snapshotRetention: 5
+     snapshotScheduleCron: 0 */5 * * *
+   machineGlobalConfig:
+     cni: calico
+     disable-kube-proxy: false
+     etcd-expose-metrics: false
+     profile: null
+   machinePools:
+   machineSelectorConfig:
+     - config:
+         protect-kernel-defaults: false
+   upgradeStrategy:
+     controlPlaneConcurrency: '1'
+     controlPlaneDrainOptions:
+       deleteEmptyDirData: true
+       disableEviction: false
+       enabled: false
+       force: false
+       gracePeriod: -1
+       ignoreDaemonSets: true
+       skipWaitForDeleteTimeoutSeconds: 0
+       timeout: 120
+     workerConcurrency: '1'
+     workerDrainOptions:
+       deleteEmptyDirData: true
+       disableEviction: false
+       enabled: false
+       force: false
+       gracePeriod: -1
+       ignoreDaemonSets: true
+       skipWaitForDeleteTimeoutSeconds: 0
+       timeout: 120
+ machineSelectorConfig:
+   - config: {}
+__clone: true
