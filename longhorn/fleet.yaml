@@ -1,10 +1,10 @@
 defaultNamespace: longhorn-system
 
 helm:
-  releaseName: longhorn
+  repo: https://charts.longhorn.io
   chart: longhorn
   version: 1.5.3
-  repo: https://charts.longhorn.io
+  releaseName: longhorn
   values:
     installCRDs: true
 
