@@ -56,4 +56,3 @@ spec:
        timeout: 120
  machineSelectorConfig:
    - config: {}
-__clone: true
