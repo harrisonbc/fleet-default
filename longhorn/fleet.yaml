@@ -3,7 +3,7 @@ defaultNamespace: longhorn-system
 helm:
   repo: https://charts.longhorn.io
   chart: longhorn
-  version: 1.5.3
+  version: 1.5.4
   releaseName: longhorn
   values:
     installCRDs: true
