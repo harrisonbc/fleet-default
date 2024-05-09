@@ -273,7 +273,7 @@ persistence:
     database:
       accessMode: ReadWriteOnce
       annotations: {}
-      existingClaim: 'pvc-1c05606b-9bd4-436a-99d8-aec381fa3175'
+      existingClaim: ''
       size: 10Gi
       storageClass: ''
       subPath: ''
@@ -281,28 +281,28 @@ persistence:
       jobLog:
         accessMode: ReadWriteOnce
         annotations: {}
-        existingClaim: 'pvc-1d5c4cb7-7589-4e53-9c6f-c0e9103646b6'
+        existingClaim: ''
         size: 10Gi
         storageClass: ''
         subPath: ''
     redis:
       accessMode: ReadWriteOnce
       annotations: {}
-      existingClaim: 'pvc-c9649108-f64d-4d0e-b665-bede7dc8b31d'
+      existingClaim: ''
       size: 10Gi
       storageClass: ''
       subPath: ''
     registry:
       accessMode: ReadWriteOnce
       annotations: {}
-      existingClaim: 'pvc-5be66023-b2b0-4373-b3b7-023d33157233'
+      existingClaim: ''
       size: 500Gi
       storageClass: ''
       subPath: ''
     trivy:
       accessMode: ReadWriteOnce
       annotations: {}
-      existingClaim: 'pvc-e6e58a55-4ec8-4a5b-8dcf-f0010aac763b'
+      existingClaim: ''
       size: 10Gi
       storageClass: ''
       subPath: ''
