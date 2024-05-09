@@ -3,5 +3,5 @@ defaultNamespace: longhorn-system
 helm:
   repo: https://charts.longhorn.io
   chart: longhorn
-  version: v1.6.1
+  version: v1.5.3
   releaseName: longhorn
