@@ -5,3 +5,9 @@ helm:
   chart: longhorn
   version: v1.6.1
   releaseName: longhorn
+  values:
+    installCRDs: true
+    defaultSettings:
+      backupTarget: s3://longhorn-backups@us-east-1/longhornlab
+      backupTargetCredentialSecret: longhorn-s3-secret
+
