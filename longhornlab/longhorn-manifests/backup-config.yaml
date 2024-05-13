@@ -1,17 +1,17 @@
-apiVersion: longhorn.io/v1beta2
-kind: Setting
-metadata:
-  name: backup-target
-  namespace: longhorn-system
-value: s3://longhorn-backups@us-east-1/longhornlab
----
-apiVersion: longhorn.io/v1beta2
-kind: Setting
-metadata:
-  name: backup-target-credential-secret
-  namespace: longhorn-system
-value: longhorn-s3-secret
----
+#apiVersion: longhorn.io/v1beta2
+#kind: Setting
+#metadata:
+#  name: backup-target
+#  namespace: longhorn-system
+#value: s3://longhorn-backups@us-east-1/longhornlab
+#---
+#apiVersion: longhorn.io/v1beta2
+#kind: Setting
+#metadata:
+#  name: backup-target-credential-secret
+#  namespace: longhorn-system
+#value: longhorn-s3-secret
+#---
 apiVersion: v1
 kind: Secret
 metadata:
