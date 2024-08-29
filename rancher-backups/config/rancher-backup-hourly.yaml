@@ -6,4 +6,4 @@ spec:
   resourceSetName: rancher-resource-set
   retentionCount: 168
   schedule: 0 * * * *
-type: resources.cattle.io.backup
+# type: resources.cattle.io.backup
