@@ -9,4 +9,4 @@ spec:
 type: resources.cattle.io.backup
 
 dependsOn:
-  - name: rancher-backups-rancher-backups-app
+  - name: rancher-backups-rancher-backups-crd

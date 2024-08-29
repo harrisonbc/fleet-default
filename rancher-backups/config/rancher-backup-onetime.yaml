@@ -11,4 +11,4 @@ spec:
   retentionCount: 10
 
 dependsOn:
-  - name: rancher-backups-rancher-backups-app
+  - name: rancher-backups-rancher-backups-crd
