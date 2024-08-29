@@ -8,3 +8,5 @@ spec:
   schedule: 0 * * * *
 type: resources.cattle.io.backup
 
+dependsOn:
+  - name: fleet-defaults-rancher-backups-app

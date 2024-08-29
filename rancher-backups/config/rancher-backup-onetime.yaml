@@ -10,3 +10,5 @@ spec:
   resourceSetName: rancher-resource-set
   retentionCount: 10
 
+dependsOn:
+  - name: fleet-defaults-rancher-backups-app

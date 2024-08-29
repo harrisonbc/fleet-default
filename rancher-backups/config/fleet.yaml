@@ -1,3 +1,6 @@
 defaultNamespace: cattle-resources-system
 helm:
   releaseName: rancher-backups-config
+
+dependsOn:
+  - name: fleet-defaults-rancher-backups-app
