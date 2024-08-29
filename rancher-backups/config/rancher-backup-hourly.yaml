@@ -9,4 +9,4 @@ spec:
 type: resources.cattle.io.backup
 
 dependsOn:
-  - name: fleet-defaults-rancher-backups-app
+  - name: fleet-defaults-fleet-defaults-rancher-backups-app

@@ -3,4 +3,4 @@ helm:
   releaseName: rancher-backups-config
 
 dependsOn:
-  - name: fleet-defaults-rancher-backups-app
+  - name: fleet-defaults-fleet-defaults-rancher-backups-app
