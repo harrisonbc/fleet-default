@@ -16,3 +16,6 @@ helm:
       folder: "rancher-backups"
       insecureTLSSkipVerify: false
       region: "eu-west-2"
+
+dependsOn:
+  - name: fleet-defaults-rancher-backups-crd
