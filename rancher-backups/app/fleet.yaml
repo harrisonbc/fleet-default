@@ -18,4 +18,4 @@ helm:
       region: "eu-west-2"
 
 dependsOn:
-  - name: fleet-defaults-fleet-defaults-rancher-backups-crd
+  - name: fleet-defaults-rancher-backups-rancher-backups-crd
