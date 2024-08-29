@@ -1,0 +1,9 @@
+apiVersion: resources.cattle.io/v1
+kind: Backup
+metadata:
+  name: rancher-backup-daily
+spec:
+  resourceSetName: rancher-resource-set
+  retentionCount: 24
+  schedule: 0 6 * * *
+
