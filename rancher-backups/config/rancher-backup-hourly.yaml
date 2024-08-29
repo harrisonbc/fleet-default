@@ -7,6 +7,3 @@ spec:
   retentionCount: 168
   schedule: 0 * * * *
 type: resources.cattle.io.backup
-
-dependsOn:
-  - name: rancher-backups-rancher-backups-crd
