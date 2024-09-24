@@ -7,7 +7,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/harrisonbc/fleet-defaults.git
+    repoURL: https://github.com/harrisonbc/fleet-default.git
     path: argo-cd/charts/argo-cd/
     targetRevision: HEAD
   destination:
