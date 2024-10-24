@@ -1,7 +1,7 @@
 apiVersion: management.cattle.io/v3
 kind: Project
 metadata:
-  generateName: p-
+  name: p-mynewprojectwithlimits
   namespace: c-m-b4bc9g4g
 spec:
   clusterName: c-m-b4bc9g4g
