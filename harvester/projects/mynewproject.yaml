@@ -1,0 +1,22 @@
+apiVersion: management.cattle.io/v3
+kind: Project
+metadata:
+  generateName: p-
+  namespace: c-m-b4bc9g4g
+spec:
+  clusterName: c-m-b4bc9g4g
+  containerDefaultResourceLimit:
+    limitsCpu: 2000m
+    limitsMemory: 256Mi
+    requestsCpu: 1000m
+    requestsMemory: 128Mi
+  displayName: MyNewProjectWithLimits
+  namespaceDefaultResourceQuota:
+    limit:
+      limitsCpu: 2000m
+      requestsMemory: 1024Mi
+  resourceQuota:
+    limit:
+      limitsCpu: 4000m
+      requestsMemory: 2048Mi
+    usedLimit: {}
