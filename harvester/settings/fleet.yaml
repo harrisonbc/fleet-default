@@ -1,5 +1,0 @@
-apiVersion: harvesterhci.io/v1beta1
-kind: Setting
-metadata:
-  name: auto-disk-provision-paths
-value: /dev/disk/by-path/pci-0000:01:??.0-scsi-0:0:0:?
