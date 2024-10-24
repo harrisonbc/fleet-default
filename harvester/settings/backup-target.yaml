@@ -1,0 +1,5 @@
+apiVersion: harvesterhci.io/v1beta1
+kind: Setting
+metadata:
+  name: backup-target
+value: {"type":"s3","endpoint":"s3.brynnharrison.com","accessKeyId":"accesskey","secretAccessKey":"secretkey","bucketName":"harvester-backups","bucketRegion":"eu-west-1","cert":"","virtualHostedStyle":false}
