@@ -1,0 +1,74 @@
+apiVersion: harvesterhci.io/v1beta1
+kind: VirtualMachineTemplateVersion
+metadata:
+  generateName: my-new-template-
+  namespace: default
+spec:
+  templateId: default/my-new-template
+  vm:
+    metadata:
+      labels:
+        harvesterhci.io/os: ubuntu
+    spec:
+      runStrategy: RerunOnFailure
+      template:
+        metadata:
+          annotations:
+            harvesterhci.io/sshNames: '["default/brynn"]'
+          creationTimestamp: null
+        spec:
+          affinity: {}
+          domain:
+            cpu:
+              cores: 2
+              sockets: 1
+              threads: 1
+            devices:
+              disks:
+                - bootOrder: 1
+                  cdrom:
+                    bus: sata
+                  name: disk-0
+                - bootOrder: 2
+                  disk:
+                    bus: sata
+                  name: boot
+                - disk:
+                    bus: virtio
+                  name: cloudinitdisk
+              inputs:
+                - bus: usb
+                  name: tablet
+                  type: tablet
+              interfaces:
+                - bridge: {}
+                  model: virtio
+                  name: default
+            features:
+              acpi:
+                enabled: true
+            machine:
+              type: ''
+            resources:
+              limits:
+                cpu: '2'
+                memory: 4Gi
+          evictionStrategy: LiveMigrateIfPossible
+          networks:
+            - multus:
+                networkName: default/main-lan
+              name: default
+          terminationGracePeriodSeconds: 120
+          volumes:
+            - name: disk-0
+              persistentVolumeClaim:
+                claimName: '-disk-0-wqldu'
+            - name: boot
+              persistentVolumeClaim:
+                claimName: '-boot-cnqcq'
+            - cloudInitNoCloud:
+                networkDataSecretRef:
+                  name: template-1-fs9uh
+                secretRef:
+                  name: template-1-fs9uh
+              name: cloudinitdisk

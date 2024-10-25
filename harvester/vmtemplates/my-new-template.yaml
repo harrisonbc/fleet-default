@@ -1,0 +1,5 @@
+apiVersion: harvesterhci.io/v1beta1
+kind: VirtualMachineTemplate
+metadata:
+  name: my-new-template
+  namespace: default
