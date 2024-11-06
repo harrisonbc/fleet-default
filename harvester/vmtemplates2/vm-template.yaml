@@ -1,0 +1,6 @@
+apiVersion: harvesterhci.io/v1beta1
+kind: VirtualMachineTemplate
+metadata:
+  name: vm-template-fleet-1
+  namespace: default
+spec:

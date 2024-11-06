@@ -1,0 +1,76 @@
+apiVersion: harvesterhci.io/v1beta1
+kind: VirtualMachineTemplateVersion
+metadata:
+  annotations:
+    template-version.harvesterhci.io/customName: vm-template-fleet-1
+  labels:
+    template.harvesterhci.io/templateID: vm-template-fleet-1
+  managedFields:
+  name: vm-template-fleet-1-v1
+  namespace: default
+spec:
+  templateId: default/vm-template-fleet-1
+  vm:
+    metadata:
+      annotations:
+        harvesterhci.io/volumeClaimTemplates: >-
+          [{"metadata":{"name":"-disk-0-0001","annotations":{"harvesterhci.io/imageId":"arm-public/image-2hbfm"}},"spec":{"accessModes":["ReadWriteMany"],"resources":{"requests":{"storage":"10Gi"}},"volumeMode":"Block","storageClassName":"longhorn-image-2hbfm"}}]
+      creationTimestamp: null
+      labels:
+        harvesterhci.io/os: ubuntu
+    spec:
+      runStrategy: RerunOnFailure
+      template:
+        metadata:
+          annotations:
+            harvesterhci.io/sshNames: '["default/brynn"]'
+          creationTimestamp: null
+        spec:
+          affinity: {}
+          domain:
+            cpu:
+              cores: 2
+              sockets: 1
+              threads: 1
+            devices:
+              disks:
+                - bootOrder: 1
+                  disk:
+                    bus: virtio
+                  name: disk-0
+                - disk:
+                    bus: virtio
+                  name: cloudinitdisk
+              inputs:
+                - bus: usb
+                  name: tablet
+                  type: tablet
+              interfaces:
+                - bridge: {}
+                  model: virtio
+                  name: default
+            features:
+              acpi:
+                enabled: true
+            machine:
+              type: ''
+            resources:
+              limits:
+                cpu: '2'
+                memory: 4Gi
+          evictionStrategy: LiveMigrateIfPossible
+          networks:
+            - multus:
+                networkName: default/main-lan
+              name: default
+          terminationGracePeriodSeconds: 120
+          volumes:
+            - name: disk-0
+              persistentVolumeClaim:
+                claimName: '-disk-0-0001'
+            - cloudInitNoCloud:
+                networkDataSecretRef:
+                  name: vm-template-fleet-1
+                secretRef:
+                  name: vm-template-fleet-1
+              name: cloudinitdisk
